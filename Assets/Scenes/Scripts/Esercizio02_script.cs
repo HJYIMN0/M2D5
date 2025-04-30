@@ -10,17 +10,23 @@ public class Esercizio02_script : MonoBehaviour
     public int minimo = 3;
     public int massimo = 25;
     public int[] stampa = new int[8];
+    public int[] cerca = new int[4];
     
     
+    
+
+
     void generaArray()
     {
-        int[] x = new int[dimensione];
-        for (int i = 0; i < x.Length; i++)
+        
+        for (int i = 0; i < stampa.Length; i++)
         {
             int valore = Random.Range(minimo, massimo + 1);
+            
             Debug.Log("Questo è il valore alla posizione " + ( i + 1 ) + " dell'array (" + valore+ ")");
 
         }
+        Debug.Log("Fine funzione GeneraArray");
 
     }
 
@@ -29,27 +35,59 @@ public class Esercizio02_script : MonoBehaviour
         for (int i = 0; i < stampa.Length; i++)
         {
             int x = stampa[i];
+            
             Debug.Log("Stampo il valore alla posizione " + ( i + 1) + " dell'array (" + x + ")");
 
         
         }
-       
+        Debug.Log("Fine funzione StampaArray");
+
     }
 
     void TrovaMinimo()
     {
-        for (int i = 0; i<stampa.Length; i++)
+        int valoreMinimo = cerca[0];
+        
+        for (int i = 1; i < cerca.Length; i++)
         {
-            int x = stampa[i];
-            if (x < stampa[i])
+          
+                        
+            
+            if (cerca[i] < valoreMinimo)
             {
-                minimo = x;
+               valoreMinimo = cerca[i];
             }
+           
             
 
         }
-        Debug.Log(minimo);
+        
+        Debug.Log("Questo è il valore minimo tra i valori dell'array (" + valoreMinimo + ")" );
+        Debug.Log("Fine funzione TrovaMinimo");
     }
+    
+
+    void TrovaMassimo()
+    {
+        
+        int valoreMassimo = cerca[0];
+
+        for (int i = 1; i < cerca.Length; i++)
+        {
+
+            if (cerca[i] > valoreMassimo) 
+            {
+            
+                valoreMassimo= cerca[i];
+            
+            }
+        
+        }
+
+        Debug.Log("Questo è il valore massimo dell'array: (" + valoreMassimo + ")");
+
+    }
+
     
     
     
@@ -57,8 +95,13 @@ public class Esercizio02_script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+
+
         generaArray();
         StampaArray();  
+        TrovaMinimo();
+        TrovaMassimo();
         
     }
 
