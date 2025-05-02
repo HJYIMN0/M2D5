@@ -246,7 +246,7 @@ MonoBehaviour:
   array: 0000000000000000000000000000000000000000000000000000000000000000
   massimo: 80
   minimo: 5
-  dimensione: 2
+  dimensione: 18
 --- !u!4 &1448985536
 Transform:
   m_ObjectHideFlags: 0

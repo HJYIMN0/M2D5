@@ -49,7 +49,7 @@ public class Esercizio03_02_script : MonoBehaviour
                 minimo = a[i];
 
             }
-            if (minimo2 > a[i] && a[i] > minimo)
+            else if (minimo2 > a[i] && a[i] >= minimo)
             {
                 minimo2 = a[i];
 
@@ -75,7 +75,7 @@ public class Esercizio03_02_script : MonoBehaviour
                 massimo = a[i];
 
             }
-            if (massimo2 < a[i] && a[i] > massimo)
+            else if (massimo2 < a[i] && a[i] >= massimo)
             {
                 massimo2 = a[i];
             

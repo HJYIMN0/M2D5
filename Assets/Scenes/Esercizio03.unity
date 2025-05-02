@@ -288,9 +288,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cbf99f30ef549941b0764fe5bf29ef3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dimensione: 10
-  minimo: 10
-  massimo: 100
+  dimensione: 25
+  minimo: 1
+  massimo: 15
 --- !u!4 &1221974301
 Transform:
   m_ObjectHideFlags: 0
